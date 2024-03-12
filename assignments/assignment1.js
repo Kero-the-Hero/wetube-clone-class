@@ -10,6 +10,8 @@ app.get('/contact', (req, res) => res.send('<h1>Contact</h1>'));
 app.get('/login', (req, res) => res.send('<h1>Login</h1>'));
 
 const handleListening = () =>
-    console.log('Server Listening on port http://localhost:"PORT" 🚀');
+    console.log(`Server Listening on port https://localhost:${PORT} 🚀`);
 
 app.listen(PORT, handleListening);
+
+const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`;
