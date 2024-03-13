@@ -4,16 +4,25 @@ const PORT = 5000;
 
 const app = express();
 
-const logger = (req, res, next) => {
-    console.log(`${req.method} ${req.url}`);
+const routerLogger = (req, res, next) => {
+    console.log("PATH",req.path);
     next();
 };
-
-const handleHome = (req, res) => {
-    return res.send("I love middlewares!");
+const methodLogger = (req, res, next) => {
+    console.log("METHOD",req.method);
+    next();
+} ;
+const home = (req, res) => {
+    console.log("I will respond.");  
+    return res.send("hello");
 };
+const login = (req, res) => {
+    return res.send("login");
+}
 
-app.get('/', logger, handleHome); //라우터//
+app.use(methodLogger, routerLogger);
+app.get('/', home); //라우터//
+app.get('/login', login);
 
 
 const handleListening = () =>
