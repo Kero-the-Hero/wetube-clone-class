@@ -14,11 +14,17 @@
 
 라우터가 하는 역할은 아래와 같이 구분해 주는 것
 
-/users/edit
-/users/delete
+/ -> Home
+/join -> Join
+/login -> Login
+/search -> Search
 
-/videos/watch
-/videos/edit
-/videos/delete
-/videos/comments
-/videos/comments/delete
+/users/:id -> See User
+/users/logout -> Log Out
+/users/edit -> Edit MY Profile (로그인 중인 유저만 가능)
+/users/delete -> Delete MY Profile (로그인 중인 유저만 가능)
+
+/videos/:id -> See Video
+/videos/:id/edit -> Edit Video
+/videos/:id/delete -> Delete Video
+/videos/upload -> Upload Video
