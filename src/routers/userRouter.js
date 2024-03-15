@@ -3,7 +3,6 @@ import { edit, remove, logout, see, users } from '../controllers/userController.
 
 const userRouter = express.Router();
 
-userRouter.get("", users);
 userRouter.get("/logout", logout);
 userRouter.get('/edit', edit);
 userRouter.get('/remove', remove);
