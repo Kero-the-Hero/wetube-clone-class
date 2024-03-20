@@ -26,6 +26,7 @@ let videos = [
 ];
 
 export const trending = (req, res) => {
+
     return res.render('home', { pageTitle: 'Home', videos });
 };
 export const watch = (req, res) => {
