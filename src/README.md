@@ -28,3 +28,8 @@
 /videos/:id/edit -> Edit Video
 /videos/:id/delete -> Delete Video
 /videos/upload -> Upload Video
+
+To run the mongo,
+sudo systemctl start mongod
+sudo systemctl status mongod
+mongosh
