@@ -72,3 +72,7 @@ export const deleteVideo = async (req,res) => {
     return res.redirect(`/`);
 
 };
+export const search = async(req,res) => {
+    const { keyword } = req.query;
+    return res.render ("search", { pageTitle:"Search"})
+}
